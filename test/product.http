@@ -1,0 +1,37 @@
+POST http://localhost:8080/products HTTP/1.1
+Authorization: Bearer ...
+
+{
+    "name": "My Product",
+    "price": 100
+}
+
+###
+
+GET http://localhost:8080/products/{id}  HTTP/1.1
+Authorization: Bearer ...
+Content-Type: application/json
+
+###
+
+PUT  http://localhost:8080/products/{id}  HTTP/1.1
+Authorization: Bearer ...
+Content-Type: application/json
+
+{
+    "id":"...",
+    "name": "Product",
+    "price": 100
+}
+
+###
+
+DELETE http://localhost:8080/products/{id}  HTTP/1.1
+Authorization: Bearer ...
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/products?page=1&limit=2&sort=asc  HTTP/1.1
+Authorization: Bearer ...
+Content-Type: application/json
